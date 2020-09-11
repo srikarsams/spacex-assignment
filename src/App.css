@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --bg-color: #eee;
+  --accent-color: rgb(198, 231, 209);
+  --highlight-color: rgb(60 213 111);
+  --card-heading-color: rgb(20, 20, 107);
+  --bg-color-section: #fff;
+  --sm-device: 700px;
+  --md-device: 1024px;
+  --lg-device: 1440px;
+}
+
+body {  
+  background: var(--bg-color);
+}
+
+.App {
+  padding: 2.4rem;
+}
+
+.App-header h3 {
+  font-size: 2rem;
+}
+
+.no-data {
+  margin: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 700px) {
+  .App {
+    background: var(--bg-color);
+    padding: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  main {
+    display: flex;
+    justify-content: stretch;
+  }
+
+  .card-container {
+    margin-top: 1rem;
+    /* flex-grow: 3; */
+    /* display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .App {
+    background: var(--bg-color);
+    padding: 3rem;
+    /* margin: 5rem; */
+    max-width: 95vw;
+    /* width: 98%; */
+  }
+
+  .card-container {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .App {
+    background: var(--bg-color);
+    padding: 3rem;
+    /* margin: 5rem; */
+    max-width: 1440px;
+    /* width: 98%; */
+  }
+
+  .card-container {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
