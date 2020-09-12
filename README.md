@@ -11,3 +11,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Lighthouse report - https://github.com/srikarsams/spacex-assignment/blob/master/Lighthouse%20report.pdf
 
+### Lighthouse Snapshots
+
+![alt Lighthouse#1](https://raw.githubusercontent.com/srikarsams/spacex-assignment/master/1.PNG)
