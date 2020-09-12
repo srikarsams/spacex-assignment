@@ -1,39 +1,36 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
 
 // CONSTANTS
-import { YEARS } from "../../constants";
+import { YEARS, YEAR } from "../../constants";
 
 // CSS
 import "./LaunchYearFilter.css";
 
 // COMPONENTS
-const Button = lazy(() => import('../Button'));
+import Button from "../Button";
 
 
-export default function LaunchYearFilter({ setYear, activeYear }) {
+export default function LaunchYearFilter() {
   const years = new Array(YEARS[1] - YEARS[0])
     .fill(YEARS[0])
     .map((year, i) => year + i);
   return (
-    <Suspense fallback={() => <p>Loading</p>}>
-      <div className="launch-year-filter">
-        <h3>Launch year</h3>
+    <div className="launch-year-filter">
+      <h3>Launch year</h3>
 
-        <hr />
+      <hr />
 
-        <div className="years-container">
-          {years.map(year => {
-            return (
-              <Button
-                data={year}
-                key={year}
-                callback={setYear}
-                activeData={activeYear}
-              />
-            )
-          })}
-        </div>
+      <div className="years-container">
+        {years.map(year => {
+          return (
+            <Button
+              data={`${year}`}
+              key={year}
+              filterType={YEAR}
+            />
+          )
+        })}
       </div>
-    </Suspense>
+    </div>
   )
 }
