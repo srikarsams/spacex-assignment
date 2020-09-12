@@ -9,5 +9,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Deployment URL - http://afternoon-atoll-87991.herokuapp.com/?year=2015
 
-### Lighthouse report
+### Lighthouse report - https://github.com/srikarsams/spacex-assignment/blob/master/Lighthouse%20report.pdf
 
